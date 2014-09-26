@@ -23,13 +23,15 @@
 			<tr>
 				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
 						href="blog.jsp">home</a></b></td>
+
+				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
+						href="subscribe.jsp">subscribe</a></b></td>
 				<%
 					if (user != null) {
+						String email = user.getEmail();
 				%>
 				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
 						href="new_post.jsp">new post</a></b></td>
-				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribe</a></b></td>
 				<%
 					pageContext.setAttribute("user_name", user.getNickname());
 				%>
@@ -41,8 +43,8 @@
 				<%
 					} else {
 				%><td class="lesserWhiteText"><b><a style="color: #FFFFFF;"
-					href="<%=userService.createLoginURL(request.getRequestURI())%>">Sign
-						in</a></b></td>
+						href="<%=userService.createLoginURL(request.getRequestURI())%>">Sign
+							in</a></b></td>
 				<%
 					}
 				%>
@@ -69,6 +71,9 @@
 					Post</button>
 			</div>
 		</form>
+	</div>
+	<div class="unsubFooter" style="position: absolute;">
+		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>
 	</div>
 </body>
 </html>

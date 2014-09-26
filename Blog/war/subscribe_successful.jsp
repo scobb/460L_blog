@@ -56,9 +56,8 @@
 	<div class="darkBackground" style="padding-bottom: 20px;">
 		<h1 class="headingWhiteText" style="color: #FFFFFF">Thank You</h1>
 		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">You
-			have successfully posted to the Travel Blog. Have you <b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribed</a></b> for
-			our daily emails?</p>
+			have successfully subscribed to the Travel Blog. Have you <b><a style="color: #FFFFFF"
+						href="new_post.jsp">posted</a></b> yet?</p>
 	</div>
 	<div class="unsubFooter" style="position: absolute;">
 		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>

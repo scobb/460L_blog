@@ -54,11 +54,11 @@
 	<h1 class="titleWhiteText">Travel Blog</h1>
 
 	<div class="darkBackground" style="padding-bottom: 20px;">
-		<h1 class="headingWhiteText" style="color: #FFFFFF">Thank You</h1>
-		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">You
-			have successfully posted to the Travel Blog. Have you <b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribed</a></b> for
-			our daily emails?</p>
+		<h1 class="headingWhiteText" style="color: #FFFFFF">Uh Oh</h1>
+		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">
+			Something went wrong when you tried to subscribe. Did enter your name and an email address? Perhaps you repeated a previous email address. Feel free to
+			<b><a style="color: #FFFFFF" href="subscribe.jsp">try again</a></b>.
+		</p>
 	</div>
 	<div class="unsubFooter" style="position: absolute;">
 		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>

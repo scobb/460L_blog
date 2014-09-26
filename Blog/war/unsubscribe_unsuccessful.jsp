@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>New Post</title>
+<title>Failed Unsubscribe</title>
 <link rel="stylesheet" type="text/css" href="Blog.css" media="screen" />
 </head>
 <body id="background">
@@ -54,11 +54,11 @@
 	<h1 class="titleWhiteText">Travel Blog</h1>
 
 	<div class="darkBackground" style="padding-bottom: 20px;">
-		<h1 class="headingWhiteText" style="color: #FFFFFF">Thank You</h1>
-		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">You
-			have successfully posted to the Travel Blog. Have you <b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribed</a></b> for
-			our daily emails?</p>
+		<h1 class="headingWhiteText" style="color: #FFFFFF">Uh Oh</h1>
+		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">
+			Something went wrong when you tried to unsubscribe. Was your email typed in correctly? Feel free to
+			<b><a style="color: #FFFFFF" href="unsubscribe.jsp">try again</a></b>.
+		</p>
 	</div>
 	<div class="unsubFooter" style="position: absolute;">
 		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>

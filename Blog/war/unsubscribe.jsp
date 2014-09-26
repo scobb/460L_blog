@@ -6,11 +6,12 @@
 <%@ page import="com.google.appengine.api.users.User"%>
 <%@ page import="com.google.appengine.api.users.UserService"%>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
+<%@ page import="javax.servlet.http.Cookie"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>New Post</title>
+<title>Unsubscribe</title>
 <link rel="stylesheet" type="text/css" href="Blog.css" media="screen" />
 </head>
 <body id="background">
@@ -53,12 +54,18 @@
 	</div>
 	<h1 class="titleWhiteText">Travel Blog</h1>
 
-	<div class="darkBackground" style="padding-bottom: 20px;">
-		<h1 class="headingWhiteText" style="color: #FFFFFF">Thank You</h1>
-		<p class="lesserWhiteText" style="text-align: left; padding: 0px;">You
-			have successfully posted to the Travel Blog. Have you <b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribed</a></b> for
-			our daily emails?</p>
+	<div class="darkBackground">
+		<h1 class="headingWhiteText" style="color: #FFFFFF">Unsubscribe</h1>
+		<form action="/unsubscribe" method="post">
+			<div>
+				<textarea name="email" class="form-control" rows="1"
+					placeholder="Email"></textarea>
+			</div>
+			<br>
+			<div>
+				<button type="submit" class="btn btn-default" style="float: right">Unsubscribe</button>
+			</div>
+		</form>
 	</div>
 	<div class="unsubFooter" style="position: absolute;">
 		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>

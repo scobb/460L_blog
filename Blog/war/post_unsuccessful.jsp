@@ -23,13 +23,15 @@
 			<tr>
 				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
 						href="blog.jsp">home</a></b></td>
+
+				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
+						href="subscribe.jsp">subscribe</a></b></td>
 				<%
 					if (user != null) {
+						String email = user.getEmail();
 				%>
 				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
 						href="new_post.jsp">new post</a></b></td>
-				<td class="lesserWhiteText"><b><a style="color: #FFFFFF"
-						href="subscribe.jsp">subscribe</a></b></td>
 				<%
 					pageContext.setAttribute("user_name", user.getNickname());
 				%>
@@ -58,6 +60,9 @@
 			title and a body? Perhaps you repeated a previous title. Feel free to
 			<b><a style="color: #FFFFFF" href="new_post.jsp">try again</a></b>.
 		</p>
+	</div>
+	<div class="unsubFooter" style="position: absolute;">
+		<b><a style="color: #FFFFFF;" href="unsubscribe.jsp">unsubscribe</a></b>
 	</div>
 </body>
 </html>
