@@ -33,29 +33,36 @@ public class SendEmailServlet extends HttpServlet
 		List<Subscriber> subscribers = SubscriberDAO.INSTANCE.getSubscribers();
 		List<BlogPost> newPosts = BlogDAO.INSTANCE.getNewBlogPosts();
 
-		String emailBody = "Hello subscriber,\n";
+		String emailBody = "Hello subscriber,\n\n";
 
 		if (newPosts.size() == 0)
 		{
 			// no new posts. sad face.
-			emailBody += "There are no new posts from our travel blog. You should contribute!";
+			emailBody += "There are no new posts from our travel blog. You should contribute!\n\n";
 		} else
 		{
-			emailBody += "Here are the new blog posts from our travel blog:\n";
+			emailBody += "Here are the new blog posts from our travel blog:"
+					+ "\n\n------------------------\n\n";
 
 			for (BlogPost post : newPosts)
 			{
-				// TODO : do we actually want to send html here? or some plaintext
-				// version
-				emailBody += post.displayHtml();
+				// build the plaintext message
+
+				emailBody += "At " + post.getTimestamp().toString() + ", "
+						+ post.getAuthor() + " created a new post:\n\n";
+				emailBody += post.getTitle().getName() + "\n\n";
+				emailBody += post.getBody().getValue() + "\n\n";
+				emailBody += "------------------------\n\n";
 
 				// persist that this blog post is no longer new
 				BlogDAO.INSTANCE.markAsNotNew(post);
 			}
 		}
-		
-		// add unsubscribe message. TODO: is this the right address?
-		emailBody += "\nTo unsubscribe, go to http://cobbreynoldsblog.appspot.com/unsubscribe";
+
+		emailBody += "Thanks for subscribing! \n\nJon and Steve";
+
+		// add unsubscribe
+		emailBody += "\n\nTo unsubscribe, go to http://cobbreynoldsblog.appspot.com/unsubscribe";
 
 		for (Subscriber subscriber : subscribers)
 		{
@@ -72,6 +79,7 @@ public class SendEmailServlet extends HttpServlet
 				outMessage.setFrom(fromAddress);
 				outMessage.addRecipient(MimeMessage.RecipientType.TO, toAddress);
 				outMessage.setSubject(subject);
+				// outMessage.setContent(emailBody, "text/html");
 				outMessage.setText(emailBody);
 				Transport.send(outMessage);
 			} catch (MessagingException e)

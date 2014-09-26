@@ -14,7 +14,16 @@
 		<servlet-name>sendEmail</servlet-name>
 		<url-pattern>/send_email</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>subscribe</servlet-name>
+		<servlet-class>blog.SubscribeServlet</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>subscribe</servlet-name>
+		<url-pattern>/subscribe</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>unsubscribe</servlet-name>
@@ -37,14 +46,13 @@
 		<url-pattern>/new_post</url-pattern>
 	</servlet-mapping>
 
-
 	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>blog.jsp</welcome-file>
 	</welcome-file-list>
 
 	<!--  limit access to sending email -->
-	<security-constraint>
+ 	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>send_email</web-resource-name>
 			<url-pattern>/send_email</url-pattern>
@@ -52,6 +60,6 @@
 		<auth-constraint>
 			<role-name>admin</role-name>
 		</auth-constraint>
-	</security-constraint>
+	</security-constraint> 
 
 </web-app>

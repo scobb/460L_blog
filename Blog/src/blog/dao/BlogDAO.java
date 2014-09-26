@@ -94,7 +94,7 @@ public enum BlogDAO {
 		 * returns true on successful save, false if post with same title
 		 * already exists
 		 **/
-		// TODO: using title as a key - is this okay?
+		// title is key
 		Key key = KeyFactory.createKey(BlogPost.class.getSimpleName(), title);
 
 		// check if this title already exists

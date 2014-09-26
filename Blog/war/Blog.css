@@ -47,6 +47,7 @@ body {
 	text-shadow: 5px 5px 5px #5c5c5c;
 	text-align: left;
 }
+
 .headingWhiteText {
 	color: #FFFFFF;
 	font-size: 30pt;
@@ -82,6 +83,18 @@ body {
 	background: #FFFFFF;
 }
 
+.unsubFooter {
+	padding: 5px 10px;
+	text-align: center;
+	width: 130;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	bottom: 0;
+	height: 35px;
+	background: rgba(92, 92, 92, .6);
+	border-radius: 20px;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup,
 	main, nav, section, summary {
 	display: block;
@@ -95,36 +108,52 @@ audio, canvas, progress, video {
 audio
 
 
+
+
 :not
 
+
  
+
 
 (
 [
 controls
 ]
 
+
  
+
 
 )
 {
 display
 
 
+
+
 :
+
 
  
 
+
 none
+
+
 
 
 ;
 height
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -188,25 +217,37 @@ img {
 svg
 
 
+
+
 :not
 
+
  
+
 
 (
 :root
 
+
  
+
 
 )
 {
 overflow
 
 
+
+
 :
+
 
  
 
+
 hidden
+
+
 
 
 ;
@@ -3646,44 +3687,62 @@ tbody.collapse.in {
 .btn
 
 
+
+
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 .dropdown-toggle
 
 
+
 	
+
 
 )
 {
 border-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -3696,44 +3755,64 @@ border-radius
 .btn
 
 
+
+
 :first-child
+
+
 
 
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 .dropdown-toggle
 
+
  
+
 
 )
 {
 border-bottom-right-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-top-right-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -3742,17 +3821,25 @@ border-top-right-radius
 .btn
 
 
+
+
 :last-child
+
+
 
 
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 ),
 .btn-group
@@ -3760,32 +3847,46 @@ border-top-right-radius
 .dropdown-toggle
 
 
+
+
 :not
+
 
 
 	
 
+
 (
 :first-child
 
+
  
+
 
 )
 {
 border-bottom-left-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-top-left-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -3869,33 +3970,47 @@ border-top-left-radius
 .btn
 
 
+
+
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 )
 {
 border-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -3904,42 +4019,62 @@ border-radius
 .btn
 
 
+
+
 :first-child
+
+
 
 
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 )
 {
 border-top-right-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-bottom-right-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-bottom-left-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -3948,42 +4083,62 @@ border-bottom-left-radius
 .btn
 
 
+
+
 :last-child
+
+
 
 
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 )
 {
 border-bottom-left-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-top-right-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 border-top-left-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }
@@ -4105,84 +4260,120 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 .input-group-addon
 
 
+
+
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 ),
 .input-group-btn
 
 
+
+
 :not
 
+
  
+
 
 (
 :first-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 ),
 .input-group
 
+
  
+
 
 .form-control
 
 
+
+
 :not
+
 
 
 	
 
+
 (
 :first-child
 
+
  
+
 
 )
 :not
 
+
  
+
 
 (
 :last-child
 
+
  
+
 
 )
 {
 border-radius
 
 
+
+
 :
 
+
  
+
 
 0;
 }

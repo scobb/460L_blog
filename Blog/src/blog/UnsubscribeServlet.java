@@ -9,32 +9,37 @@ import javax.servlet.http.HttpServletResponse;
 
 import blog.dao.SubscriberDAO;
 
-public class UnsubscribeServlet extends HttpServlet{
+public class UnsubscribeServlet extends HttpServlet
+{
 
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+			throws IOException
+	{
 
 		String email = req.getParameter("email");
-		if (!SubscriberDAO.INSTANCE.removeSubscriber(email)) {
-			// TODO: check for this cookie on the remove_email.html page to display an "Invalid email" message
-			Cookie cookie = new Cookie("badEmail", "true");
-	      cookie.setMaxAge(3);
-			resp.addCookie(cookie);
-			// TODO: redirect to page that directed us here, say email wasn't found
-			resp.sendRedirect("/remove_email.jsp");
+		if (!email.equals(""))
+		{
+
+			if (!SubscriberDAO.INSTANCE.removeSubscriber(email))
+			{
+				resp.sendRedirect("/unsubscribe_unsuccessful.jsp");
+			} else
+			{
+				resp.sendRedirect("/unsubscribe_successful.jsp");
+			}
+		} else
+		{
+			resp.sendRedirect("/unsubscribe_unsuccessful.jsp");
 		}
-		
-		// TODO: generate thanks.html, confirm that address is correct
-		resp.sendRedirect("/thanks.html");
-		
 	}
-	
+
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
-		//TODO: confirm this address
-		resp.sendRedirect("/remove_email.jsp");
+			throws IOException
+	{
+		// TODO: confirm this address
+		resp.sendRedirect("/unsubscribe.jsp");
 	}
 
 }

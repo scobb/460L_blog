@@ -77,9 +77,9 @@ public enum SubscriberDAO {
 		 * couldn't be removed
 		 **/
 		PersistenceManager pm = PMF.get().getPersistenceManager();
-		Subscriber found = getSubscriber(email);
+		Key key = KeyFactory.createKey(Subscriber.class.getSimpleName(), email);
+		Subscriber found = pm.getObjectById(Subscriber.class, key);
 		if (found == null) {
-			// subscriber doesn't exists
 			return false;
 		}
 		try {
