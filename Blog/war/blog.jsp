@@ -51,7 +51,7 @@
 				<%
 					pageContext.setAttribute("user_name", user.getNickname());
 				%>
-				<td class="lesserWhiteText">${fn:escapeXml(user_name)}|<b><a
+				<td class="lesserWhiteText">${fn:escapeXml(user_name)} |<b><a
 						style="color: #FFFFFF"
 						href="<%=userService.createLogoutURL(request.getRequestURI())%>">
 							sign out</a></b>

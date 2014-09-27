@@ -21,7 +21,7 @@ public class SubscribeServlet extends HttpServlet {
 
 		String email = req.getParameter("email");
 		String name = req.getParameter("name");
-		if (!name.equals("")) {
+		if (!name.equals("") && !email.equals("")) {
 			if (!SubscriberDAO.INSTANCE.addSubscriber(name, email)) {
 				// redirect to unsuccessful page
 				resp.sendRedirect("/subscribe_unsuccessful.jsp");

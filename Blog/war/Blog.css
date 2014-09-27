@@ -34,7 +34,8 @@ body {
 }
 
 .postBody {
-	display: block;
+	color: rgba(92, 92, 92, 1);
+	white-space: pre-line;
 	margin-left: 20px;
 	margin-right: 20px;
 }

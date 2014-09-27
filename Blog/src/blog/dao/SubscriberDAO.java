@@ -78,7 +78,16 @@ public enum SubscriberDAO {
 		 **/
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Key key = KeyFactory.createKey(Subscriber.class.getSimpleName(), email);
-		Subscriber found = pm.getObjectById(Subscriber.class, key);
+		Subscriber found;
+		try {
+			found = pm.getObjectById(Subscriber.class, key);
+		}
+		catch (Exception e) { 
+			return false;
+		}
+		finally {
+			pm.close();
+		}
 		if (found == null) {
 			return false;
 		}
